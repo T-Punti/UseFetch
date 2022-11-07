@@ -1,4 +1,4 @@
-import { ref, reactive } from 'vue';
+import { ref, reactive, toRefs } from 'vue';
 
 export function useFetch(url, options) {
   const data = ref(null);
@@ -20,8 +20,9 @@ export function useFetch(url, options) {
   };
 
   fetchData();
+
   return {
     data,
-    ...toRefs(state),
+    ...toRefs(state)
   };
 }
