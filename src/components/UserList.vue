@@ -36,6 +36,11 @@ export default {
       'https://jsonplaceholder.typicode.com/users',
       {}
     );
+    return {
+      data,
+      error,
+      loading,
+    };
   },
 };
 </script>
